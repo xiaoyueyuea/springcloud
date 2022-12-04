@@ -1,2 +1,3 @@
 # springcloud
 payment8001、payment8003用于测试eureka
+payment8004用于测试zookeeper
