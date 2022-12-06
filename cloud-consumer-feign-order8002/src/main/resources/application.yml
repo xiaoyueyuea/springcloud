@@ -19,3 +19,7 @@ eureka:
       #设置与eureka server交互的地址查询服务和注册服务都需要依赖这个地址
       #集群配置
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+
+feign:
+  hystrix:
+    enabled: true

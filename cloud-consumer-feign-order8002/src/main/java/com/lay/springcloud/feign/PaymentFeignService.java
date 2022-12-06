@@ -12,4 +12,10 @@ public interface PaymentFeignService {
 
     @GetMapping(value = "/payment/getById_{id}")
     WebResponse<Payment> getById(@PathVariable("id") Long id);
+
+    @GetMapping(value = "/payment/hystrixOkTest")
+    String hystrixOkTest();
+
+    @GetMapping(value = "/payment/hystrixTimeOutTest")
+    String hystrixTimeOutTest();
 }

@@ -61,11 +61,18 @@
             <version>${project.version}</version>
         </dependency>
 
-        <!-- eureka-client -->
+        <!-- eureka-client 注册中心-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+
+        <!-- hystrix 服务降级、熔断、限流 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+
 
     </dependencies>
 

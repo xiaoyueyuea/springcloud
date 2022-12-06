@@ -32,4 +32,14 @@ public class PaymentController {
         LOGGER.info("根据id查询payment,port:{}", serverPort);
         return new WebResponse<>(200, "成功,port:" + serverPort, paymentService.getById(id));
     }
+
+    @GetMapping(value = "/hystrixOkTest")
+    public String hystrixOkTest() {
+        return paymentService.hystrixOkTest();
+    }
+
+    @GetMapping(value = "/hystrixTimeOutTest")
+    public String hystrixTimeOutTest() {
+        return paymentService.hystrixTimeOutTest();
+    }
 }
