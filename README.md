@@ -1,3 +1,4 @@
 # springcloud
 payment8001、payment8003用于测试eureka
 payment8004用于测试zookeeper
+payment9001、payment9002用于测试nacos以及其自带的负载均衡
