@@ -1,0 +1,29 @@
+server:
+  port: 8401
+
+spring:
+  application:
+    name: cloud-alibaba-sertinel-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.127.130:8848
+    sentinel:
+      transport:
+        dashboard: 192.168.127.130:8080 #控制台
+        port: 8719 #默认8719，被占用则+1
+        #sentinel规则持久化到nacos配置中心（感觉有点问题，需要再研究）
+        datasource:
+          ds1:
+            nacos:
+              server-addr: 192.168.127.130:8848
+              dataId: cloud-alibaba-sertinel-service
+              groupId: DEFAULT_GROUP
+              data-type: json
+              rule-type: flow
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
