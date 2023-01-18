@@ -100,6 +100,15 @@
           <fork>true</fork>
           <addResources>true</addResources>
         </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <!-- 在原始Maven打包形成的jar包基础上，进行重新打包 -->
+              <!-- 不加的话会导致使用 java -jar xxx.jar 启动项目时找不到主启动类 -->
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
